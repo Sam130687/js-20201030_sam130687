@@ -20,7 +20,7 @@ export default class Page {
       this.element = element.firstElementChild;
       this.subElements = this.getBodyElements(this.element);
   
-      await this.initComponents();  
+      this.initComponents();  
       this.renderComponents();
       this.initEventListeners();
   
@@ -55,7 +55,7 @@ export default class Page {
         return elementAggregator;
     };
 
-    async initComponents () {
+    initComponents () {
         const to = new Date();
         const from = new Date(); 
         from.setMonth(from.getMonth()-1);
